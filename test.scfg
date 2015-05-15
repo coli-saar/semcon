@@ -1,0 +1,31 @@
+% start S
+
+S -> NP VP
+%% ({NP})({VP})
+
+VP -> TV NP
+%% ({NP})({TV})
+
+NP -> PN
+%% {PN}
+
+NP -> Det N
+%% ({Det})({N})
+
+
+
+Det -> 'a'
+%% y: \P Q. exists y. (P(y) & Q(y))
+
+Det -> 'every'
+%% y: \P Q. all y. (P(y) -> Q(y))
+
+N -> 'man'
+%% man
+
+N -> 'woman'
+%% woman
+
+TV -> 'loves'
+%% love
+
