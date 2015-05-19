@@ -175,4 +175,27 @@ To do this, you need to install the following additional things:
    get the `geobase` file and save it as `geobase.pl`, and get the
    `geoquery` file and save it as `geoquery.pl`.
 
-You can then write a 
+You can then call the `query` function to evaluate a Geoquery query
+and show you the list of results. You can find examples of such
+queries in the annotated `geoqueries880` corpus on the Geoquery
+website. Note that `query` expects an NLTK logic expression, which you
+can construct from a query string using `nltk.logic.Expression.fromstring`.
+
+As a fun exercise, you can write a grammar for the Geoquery language
+by hand and make it map English natural-language queries into Geoquery
+queries. The end result should behave like this (assuming `gr` is your
+grammar, which you have previously loaded with `load_grammar`):
+
+```
+>>> query(parse("name the cities in oregon", gr))
+Found 2 parse trees.
+Using parse tree: (S name (NP (NP the (NP cities)) (PP in (NP oregon))))
+Semantics: answer(A2,(city(A2) & loc(A2,B1) & const(B1,stateid(oregon))))
+answer(A2,(city(A2) , loc(A2,B1) , const(B1,stateid(oregon))))
+
+Found 3 answers:
+ - eugene
+ - portland
+ - salem
+```
+
