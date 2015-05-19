@@ -42,7 +42,7 @@ for _line in f.readlines():
         pass
     elif line.startswith("%%"):
         # semantic rule
-        children = variable_re.findall(line) # find variables like {NP}
+        children = sorted(variable_re.findall(line)) # find variables like {NP}
 
         if not children:
             args = "dummy"

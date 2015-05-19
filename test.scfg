@@ -1,16 +1,16 @@
 % start S
 
 S -> NP VP
-%% ({NP})({VP})
+%% ({X1})({X2})
 
 VP -> TV NP
-%% ({NP})({TV})
+%% ({X2})({X1})
 
 NP -> PN
 %% {PN}
 
 NP -> Det N
-%% ({Det})({N})
+%% ({X1})({X2})
 
 
 
