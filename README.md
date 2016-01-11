@@ -25,7 +25,9 @@ Using semcon requires that you have a working installation of
 your computer.
 
 You can download the source code of semcon by cloning the Mercurial
-repository, using a Mercurial client of your choice. 
+repository, using a Mercurial client of your choice. Alternatively,
+you can simply go to the [Downloads page](https://bitbucket.org/tclup/semcon/downloads)
+and click on "Download repository".
 
 
 ### Compiling a grammar ###
@@ -198,4 +200,3 @@ Found 3 answers:
  - portland
  - salem
 ```
-
